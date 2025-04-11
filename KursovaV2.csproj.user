@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Windows\Beginning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Windows\CircleParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Windows\RectangleParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Windows\Scene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Windows\TriangleParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
