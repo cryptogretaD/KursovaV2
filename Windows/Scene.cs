@@ -251,7 +251,6 @@ namespace KursovaV2
         }
 
         
-        }
     }
 }
 

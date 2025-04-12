@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Documents\\GitHub\\KursovaV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\downloads\\kursovav2\\kursovav2\\kursovav2\\interface\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|solutionrelative:kursovav2\\interface\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D89B4D3-4509-9319-09A1-17C7F7A812C2}|KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\documents\\github\\kursovav2\\windows\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D89B4D3-4509-9319-09A1-17C7F7A812C2}|KursovaV2.csproj|solutionrelative:windows\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\downloads\\kursovav2\\kursovav2\\kursovav2\\forms\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|solutionrelative:kursovav2\\forms\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\downloads\\kursovav2\\kursovav2\\kursovav2\\forms\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|solutionrelative:kursovav2\\forms\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\downloads\\kursovav2\\kursovav2\\kursovav2\\forms\\rectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|solutionrelative:kursovav2\\forms\\rectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\downloads\\kursovav2\\kursovav2\\kursovav2\\forms\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{956ACCD6-738E-4233-80F2-C826112E9DFF}|KursovaV2\\KursovaV2.csproj|solutionrelative:kursovav2\\forms\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D89B4D3-4509-9319-09A1-17C7F7A812C2}|KursovaV2.csproj|c:\\users\\\u0433\u0440\u0435\u0442\u0430\\documents\\github\\kursovav2\\forms\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D89B4D3-4509-9319-09A1-17C7F7A812C2}|KursovaV2.csproj|solutionrelative:forms\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,70 +21,37 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Circle.cs",
-              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Circle.cs",
-              "RelativeDocumentMoniker": "KursovaV2\\Forms\\Circle.cs",
-              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Circle.cs",
-              "RelativeToolTip": "KursovaV2\\Forms\\Circle.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Scene.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Documents\\GitHub\\KursovaV2\\Windows\\Scene.cs",
+              "RelativeDocumentMoniker": "Windows\\Scene.cs",
+              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Documents\\GitHub\\KursovaV2\\Windows\\Scene.cs",
+              "RelativeToolTip": "Windows\\Scene.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAAAP0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T23:04:28.952Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-04-12T17:45:04.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Triangle.cs",
-              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Triangle.cs",
-              "RelativeDocumentMoniker": "KursovaV2\\Forms\\Triangle.cs",
-              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Triangle.cs",
-              "RelativeToolTip": "KursovaV2\\Forms\\Triangle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T23:04:33.697Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IShape.cs",
-              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Interface\\IShape.cs",
-              "RelativeDocumentMoniker": "KursovaV2\\Interface\\IShape.cs",
-              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Interface\\IShape.cs",
-              "RelativeToolTip": "KursovaV2\\Interface\\IShape.cs",
+              "Title": "Circle.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Documents\\GitHub\\KursovaV2\\Forms\\Circle.cs",
+              "RelativeDocumentMoniker": "Forms\\Circle.cs",
+              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Documents\\GitHub\\KursovaV2\\Forms\\Circle.cs",
+              "RelativeToolTip": "Forms\\Circle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T23:08:53.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Shape.cs",
-              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Shape.cs",
-              "RelativeDocumentMoniker": "KursovaV2\\Forms\\Shape.cs",
-              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Shape.cs",
-              "RelativeToolTip": "KursovaV2\\Forms\\Shape.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T23:08:41.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rectangle.cs",
-              "DocumentMoniker": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Rectangle.cs",
-              "RelativeDocumentMoniker": "KursovaV2\\Forms\\Rectangle.cs",
-              "ToolTip": "C:\\Users\\\u0413\u0440\u0435\u0442\u0430\\Downloads\\KursovaV2\\KursovaV2\\KursovaV2\\Forms\\Rectangle.cs",
-              "RelativeToolTip": "KursovaV2\\Forms\\Rectangle.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T23:03:31.764Z",
+              "WhenOpened": "2025-04-12T17:45:02.86Z",
               "EditorCaption": ""
             }
           ]
