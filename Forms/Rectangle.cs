@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,12 @@ namespace KursovaV2.Forms
 {
     public class Rectangle : Shape
     {
-        public Rectangle(Point position, Color color) 
+        public byte Left { get; internal set; }
+        public byte Right { get; internal set; }
+        public byte Bottom { get; internal set; }
+        public byte Top { get; internal set; }
+
+        public Rectangle(Point position,Point delta, Color color) 
         {
             Position = position;
         }
@@ -30,7 +36,7 @@ namespace KursovaV2.Forms
                 Color.Red :
                 Color.Blue;
 
-            var colorFill = Color.FromArgb(100, Color.Red);
+            var colorFill = Color.FromArgb(100, this.Color);
 
             using (var brush = new SolidBrush(colorFill))
                 g.FillRectangle(brush, Position.X, Position.Y, Width, Height);
@@ -44,6 +50,7 @@ namespace KursovaV2.Forms
             return
                 Position.X <= point.X && point.X <= Position.X + Width &&
                 Position.Y <= point.Y && point.Y <= Position.Y + Height;
+ 
         }
 
         public override bool Intersect(Rectangle rectangle)
@@ -55,9 +62,14 @@ namespace KursovaV2.Forms
                 rectangle.Position.Y <= this.Position.Y + this.Height;
         }
 
-        public override void Move(Point position)
+        internal override Point GetPosition()
         {
-            throw new NotImplementedException();
+            return Position;
+        }
+
+        public override void Move(Point delta, Point position)
+        {
+            position = new Point(Position.X + delta.X, Position.Y + delta.Y);
         }
 
         public override string ToString()

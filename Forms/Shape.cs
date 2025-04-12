@@ -14,12 +14,12 @@ namespace KursovaV2.Forms
         public event ShapeChangedEventHandler? OnShapeChanged;
 
         //Properties
-        public Point Position { get; init; }
+        public Point Position { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
         public double Base { get; set; }
         public bool Selected { get; set; }
-        //public Color ShapeColor { get; set; }
+        public Color Color { get; internal set; }
 
         //Metods
         public abstract double CalculateArea();
@@ -27,8 +27,6 @@ namespace KursovaV2.Forms
         public abstract void Draw(Graphics g);
         public abstract bool Intersect(Rectangle rectangle);
         public abstract bool PointInShape(Point point);
-
-        public abstract void Move(Point position);
 
         protected virtual void NotifyShapeChanged(string message)
         {
@@ -40,5 +38,7 @@ namespace KursovaV2.Forms
             throw new NotImplementedException();
         }
 
+        internal abstract Point GetPosition();
+        public abstract void Move(Point position, Point delta);
     }
 }

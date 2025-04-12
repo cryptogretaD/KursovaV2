@@ -8,7 +8,7 @@ namespace KursovaV2.Forms
 {
     internal class Circle : Shape
     {
-        public Circle(Point position, int diameter, Color color)
+        public Circle(Point position, int diameter)
         {
             Position = position;
             Width = diameter;
@@ -27,7 +27,7 @@ namespace KursovaV2.Forms
                 Color.Red :
                 Color.Blue;
 
-            var colorFill = Color.FromArgb(100, Color.Red);
+            var colorFill = Color.FromArgb(100, this.Color);
 
             using (var brush = new SolidBrush(colorFill))
                 g.FillEllipse(brush, Position.X, Position.Y, Width, Height);
@@ -38,7 +38,7 @@ namespace KursovaV2.Forms
 
         public override bool Intersect(Rectangle rectangle)
         {
-            /*float cx = Position.X + Width / 2f;
+            float cx = Position.X + Width / 2f;
             float cy = Position.Y + Height / 2f;
             float radius = Width / 2f;
 
@@ -48,8 +48,7 @@ namespace KursovaV2.Forms
             float dx = cx - closestX;
             float dy = cy - closestY;
 
-            return (dx * dx + dy * dy) <= (radius * radius);*/
-            throw new NotImplementedException();
+            return (dx * dx + dy * dy) <= (radius * radius);
         }
 
         public override bool PointInShape(Point point)
@@ -64,9 +63,14 @@ namespace KursovaV2.Forms
             return dx * dx + dy * dy <= radius * radius;
         }
 
-        public override void Move(Point position)
+        internal override Point GetPosition()
         {
-            throw new NotImplementedException();
+            return Position;
+        }
+
+        public override void Move(Point position, Point delta)
+        {
+            position = new Point(Position.X + delta.X, Position.Y + delta.Y);
         }
 
         public override string ToString()

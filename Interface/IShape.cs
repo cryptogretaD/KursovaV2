@@ -14,6 +14,7 @@ namespace KursovaV2.Interface
        abstract bool PointInShape(Point point);
        abstract bool Intersect(Rectangle rectangle);
 
-       abstract void Move(Point position);
+       //abstract void Move(Point delta);
+       void Move(Point position, Point delta);
     }
 }

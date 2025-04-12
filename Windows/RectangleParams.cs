@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static KursovaV2.Scene;
 
 namespace KursovaV2.Windows
 {
@@ -31,11 +32,8 @@ namespace KursovaV2.Windows
                 return;
             }
 
-            Scene sc = new Scene(height, width); // height, width
-            sc.SetStartingShape("rectangle");
-
+            ((Scene)this.Owner).SetStartingShape(ShapeType.Rectangle);
             this.Hide();
-            sc.Show();
         }
     }
 }

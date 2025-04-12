@@ -1,4 +1,6 @@
-﻿namespace KursovaV2.Windows
+﻿using static KursovaV2.Scene;
+
+namespace KursovaV2.Windows
 {
     public partial class Beginning : Form
     {
@@ -45,7 +47,7 @@
         private void RectangleBtn_Click(object sender, EventArgs e)
         {
             Scene scene = new Scene(100, 150); // height, width
-            scene.SetStartingShape("rectangle");
+            scene.SetStartingShape(ShapeType.Rectangle);
             this.Hide();
             scene.Show();
         }
@@ -53,7 +55,7 @@
         private void TriangleBtn_Click(object sender, EventArgs e)
         {
             Scene scene = new Scene(100, 150);
-            scene.SetStartingShape("triangle");
+            scene.SetStartingShape(ShapeType.Triangle);
             this.Hide();
             scene.Show();
         }
@@ -61,7 +63,7 @@
         private void CircleBtn_Click(object sender, EventArgs e)
         {
             Scene scene = new Scene(100, 150);
-            scene.SetStartingShape("circle");
+            scene.SetStartingShape(ShapeType.Circle);
             this.Hide();
             scene.Show();
         }

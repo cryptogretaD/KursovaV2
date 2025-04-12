@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,9 +8,14 @@ using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace KursovaV2.Forms
 {
-    public class Triangle :Shape
+    public class Triangle : Shape
     {
-        public Triangle() {}
+        public Triangle(Point position, int width, int height)
+        {
+            Position = position;
+            Width = width; ;
+            Height = height;
+        }
 
 
         public override double CalculateArea()
@@ -20,13 +26,13 @@ namespace KursovaV2.Forms
         public override void Draw(Graphics g)
         {
             var colorBorder = Selected ? Color.Red : Color.Blue;
-            var colorFill = Color.FromArgb(100, Color.Red); 
+            var colorFill = Color.FromArgb(100, this.Color);
 
             Point[] points = new Point[]
             {
-                new Point(Position.X, Position.Y),                         // Top point
-                new Point(Position.X - Width / 2, Position.Y + Height),   // Bottom-left
-                new Point(Position.X + Width / 2, Position.Y + Height)    // Bottom-right
+            new Point(Position.X + Width / 2, Position.Y), // Top
+            new Point(Position.X, Position.Y + Height),     // Bottom left
+            new Point(Position.X + Width, Position.Y + Height) // Bottom right
             };
 
             using (var brush = new SolidBrush(colorFill))
@@ -36,46 +42,36 @@ namespace KursovaV2.Forms
                 g.DrawPolygon(pen, points);
         }
 
-        public override bool Intersect(Rectangle rectangle)
+
+        public override bool Intersect(Rectangle selectionRect)
         {
-            Point[] points = new Point[]
-            {
-                new Point(Position.X, Position.Y),
-                new Point(Position.X - Width / 2, Position.Y + Height),
-                new Point(Position.X + Width / 2, Position.Y + Height)
-            };
-
-            foreach (var point in points)
-            {
-                if (point.X >= rectangle.Position.X &&
-            point.X <= rectangle.Position.X + rectangle.Width &&
-            point.Y >= rectangle.Position.Y &&
-            point.Y <= rectangle.Position.Y + rectangle.Height)
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            var bounds = new System.Drawing.Rectangle(Position.X, Position.Y, Width, Height);
+            return bounds.IntersectsWith(new System.Drawing.Rectangle(selectionRect.Position.X, selectionRect.Position.Y, selectionRect.Width, selectionRect.Height));
         }
 
         public override bool PointInShape(Point point)
         {
-            Point p0 = new Point(Position.X, Position.Y);
-            Point p1 = new Point(Position.X - Width / 2, Position.Y + Height);
-            Point p2 = new Point(Position.X + Width / 2, Position.Y + Height);
-
-            float denominator = ((p1.Y - p2.Y) * (p0.X - p2.X) + (p2.X - p1.X) * (p0.Y - p2.Y));
-            float a = ((p1.Y - p2.Y) * (point.X - p2.X) + (p2.X - p1.X) * (point.Y - p2.Y)) / denominator;
-            float b = ((p2.Y - p0.Y) * (point.X - p2.X) + (p0.X - p2.X) * (point.Y - p2.Y)) / denominator;
-            float c = 1 - a - b;
-
-            return a >= 0 && b >= 0 && c >= 0;
+            Point[] triangle = new Point[]
+            {
+            new Point(Position.X + Width / 2, Position.Y),
+            new Point(Position.X, Position.Y + Height),
+            new Point(Position.X + Width, Position.Y + Height)
+            };
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddPolygon(triangle);
+                return path.IsVisible(point);
+            }
         }
 
-        public override void Move(Point position)
+        internal override Point GetPosition()
         {
-            position = position;
+            return Position;
+        }
+
+        public override void Move(Point position, Point delta)
+        {
+            position = new Point(Position.X + delta.X, Position.Y + delta.Y);
         }
 
         public override string ToString()

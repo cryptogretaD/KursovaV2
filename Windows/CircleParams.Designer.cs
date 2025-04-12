@@ -51,18 +51,19 @@
             // 
             // okButton
             // 
-            okButton.Location = new Point(155, 390);
+            okButton.Location = new Point(157, 175);
             okButton.Name = "okButton";
             okButton.Size = new Size(94, 29);
             okButton.TabIndex = 2;
             okButton.Text = "OK";
             okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
             // 
             // CircleParams
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(431, 525);
+            ClientSize = new Size(431, 234);
             Controls.Add(okButton);
             Controls.Add(diameterTextBox);
             Controls.Add(diameterLabel);

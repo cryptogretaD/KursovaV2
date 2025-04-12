@@ -4,6 +4,9 @@
     <Compile Update="Windows\Beginning.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Windows\ChangeColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Windows\CircleParams.cs">
       <SubType>Form</SubType>
     </Compile>
