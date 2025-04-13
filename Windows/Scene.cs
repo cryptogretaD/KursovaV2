@@ -12,8 +12,9 @@ namespace KursovaV2
     {
         public void SetStartingShape(ShapeType shapetype)
         {
-            _currentShapeType = shapetype; // "rectangle", "triangle", or "circle"
+            _currentShapeType = shapetype;
         }
+
         private List<Shape> _shapes = new List<Shape>();
         private int _width;
         private int _height;
@@ -24,12 +25,10 @@ namespace KursovaV2
         private ShapeType _currentShapeType = ShapeType.Rectangle;
         private Color shapeColor;
         private int diameter;
-        private object Position;
 
         private bool _isDragging = false;
         private Shape? _draggedShape = null;
         private Point _lastMousePosition;
-
 
         public Scene(int height, int width)
         {
@@ -40,6 +39,8 @@ namespace KursovaV2
             this.MouseClick += Scene_MouseClick;
             this.MouseDown += Scene_MouseDown;
             this.MouseUp += Scene_MouseUp;
+            this.MouseMove += Scene_MouseMove;
+            this.MouseDoubleClick += Scene_MouseDoubleClick;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -81,23 +82,12 @@ namespace KursovaV2
             }
         }
 
-        private Point Position1
-        {
-            get
-            {
-                return _frameRectangle.Position;
-            }
-        }
-
-        public Color Color { get; private set; }
-        public int X { get; private set; }
-        public int Y { get; private set; }
-
-        private void Scene_MouseMove(object sender, MouseEventArgs e, Point position)
+        private void Scene_MouseMove(object sender, MouseEventArgs e)
         {
             if (_frameRectangle == null)
                 return;
-            position = new Point
+
+            _frameRectangle.Position = new Point
             {
                 X = Math.Min(_mouseDownLocation.X, e.Location.X),
                 Y = Math.Min(_mouseDownLocation.Y, e.Location.Y)
@@ -113,17 +103,17 @@ namespace KursovaV2
                     shape.Selected = shape.Intersect(_frameRectangle);
                 }
             }
+
             if (_isDragging && _draggedShape != null)
             {
                 int dx = e.X - _lastMousePosition.X;
                 int dy = e.Y - _lastMousePosition.Y;
 
-                _draggedShape.Move(new Point(dx, dy),
-                _draggedShape.GetPosition());
+                _draggedShape.Move(new Point(dx, dy), _draggedShape.GetPosition());
                 _lastMousePosition = e.Location;
-
                 Invalidate();
             }
+
             Invalidate();
         }
 
@@ -133,7 +123,6 @@ namespace KursovaV2
             _draggedShape = null;
         }
 
-        private Point GetPosition() => _frameRectangle.Position;
         private void Scene_MouseClick(object sender, MouseEventArgs e)
         {
             Shape shape = null;
@@ -145,18 +134,21 @@ namespace KursovaV2
                     {
                         Position = e.Location,
                         Width = _width,
-                        Height = _height
+                        Height = _height,
+                        Color = Color.Red
                     };
                     break;
                 case ShapeType.Triangle:
                     shape = new Trinagle(e.Location, _width, _height)
                     {
+                        Color = Color.Red
                     };
-
                     break;
                 case ShapeType.Circle:
                     shape = new Circle(e.Location, _width)
                     {
+                        Height = _height,
+                        Color = Color.Red
                     };
                     break;
             }
@@ -174,6 +166,19 @@ namespace KursovaV2
 
             _shapes.Add(shape);
             Invalidate();
+        }
+
+        private void Scene_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            for (int i = _shapes.Count - 1; i >= 0; i--)
+            {
+                if (_shapes[i].PointInShape(e.Location))
+                {
+                    _shapes.RemoveAt(i);
+                    Invalidate();
+                    break;
+                }
+            }
         }
 
         public void UpdateShapeColors(Type shapeType, Color newColor)
@@ -194,7 +199,6 @@ namespace KursovaV2
             var changeForm = new ChangeColor(this);
             changeForm.ShowDialog();
         }
-
 
         private void Square_Click(object sender, EventArgs e)
         {
@@ -246,11 +250,7 @@ namespace KursovaV2
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            // Close the form
             this.Close();
         }
-
-        
     }
 }
-

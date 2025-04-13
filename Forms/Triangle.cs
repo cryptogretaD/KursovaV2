@@ -15,7 +15,7 @@ namespace KursovaV2.Forms
             Position = position;
             Width = width; ;
             Height = height;
-        }
+        } 
 
 
         public override double CalculateArea()

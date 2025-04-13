@@ -33,3 +33,6 @@ C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\refint\K
 C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\KursovaV2.pdb
 C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\KursovaV2.genruntimeconfig.cache
 C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\ref\KursovaV2.dll
+C:\Users\Грета\Documents\GitHub\KursovaV2\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\KursovaV2.csproj.AssemblyReference.cache
+C:\Users\Грета\Documents\GitHub\KursovaV2\obj\Debug\net8.0-windows\KursovaV2.csproj.Up2Date

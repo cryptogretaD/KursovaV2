@@ -45,39 +45,39 @@ namespace KursovaV2.Windows
             // 
             // btnRectangle
             // 
-            btnRectangle.Location = new Point(174, 74);
+            btnRectangle.Location = new Point(88, 57);
             btnRectangle.Name = "btnRectangle";
             btnRectangle.Size = new Size(94, 29);
             btnRectangle.TabIndex = 0;
             btnRectangle.Text = "Rectangle";
             btnRectangle.UseVisualStyleBackColor = true;
-            this.btnRectangle.Click += new EventHandler(this.btnRectangle_Click);
+            btnRectangle.Click += btnRectangle_Click;
             // 
             // btnTriangle
             // 
-            btnTriangle.Location = new Point(180, 155);
+            btnTriangle.Location = new Point(88, 109);
             btnTriangle.Name = "btnTriangle";
             btnTriangle.Size = new Size(94, 29);
             btnTriangle.TabIndex = 1;
             btnTriangle.Text = "Triangle";
             btnTriangle.UseVisualStyleBackColor = true;
-            this.btnTriangle.Click += new EventHandler(this.btnTriangle_Click);
+            btnTriangle.Click += btnTriangle_Click;
             // 
             // btnCircle
             // 
-            btnCircle.Location = new Point(181, 259);
+            btnCircle.Location = new Point(88, 162);
             btnCircle.Name = "btnCircle";
             btnCircle.Size = new Size(94, 29);
             btnCircle.TabIndex = 2;
             btnCircle.Text = "Circle";
             btnCircle.UseVisualStyleBackColor = true;
-            this.btnCircle.Click += new EventHandler(this.btnCircle_Click);
+            btnCircle.Click += btnCircle_Click;
             // 
             // ChangeColor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(327, 423);
             Controls.Add(btnCircle);
             Controls.Add(btnTriangle);
             Controls.Add(btnRectangle);
